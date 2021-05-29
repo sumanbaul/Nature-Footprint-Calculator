@@ -64,41 +64,48 @@ $(".control").click(function () {
         .find(".result-value")
         .text(equivalentWaste);
     } else {
-      top = top - 1;
-      var savingsC02 = (
-        getCurrentResultValue("savingsC02") - topWear[0]
-      ).toFixed(1);
-      var equivalentTrees = (
-        getCurrentResultValue("equivalentTrees") - topWear[1]
-      ).toFixed(1);
-      var savingsH20 = (
-        getCurrentResultValue("savingsH20") - topWear[2]
-      ).toFixed(1);
-      var equivalentWater = (
-        getCurrentResultValue("equivalentWater") - topWear[3]
-      ).toFixed(1);
-      var savingsWaste = (
-        getCurrentResultValue("savingsWaste") - topWear[4]
-      ).toFixed(1);
-      var equivalentWaste = (
-        getCurrentResultValue("equivalentWaste") - topWear[5]
-      ).toFixed(1);
+      if (top <= 0) {
+      } else {
+        top = top - 1;
+        var savingsC02 = (
+          getCurrentResultValue("savingsC02") - topWear[0]
+        ).toFixed(1);
+        var equivalentTrees = (
+          getCurrentResultValue("equivalentTrees") - topWear[1]
+        ).toFixed(1);
+        var savingsH20 = (
+          getCurrentResultValue("savingsH20") - topWear[2]
+        ).toFixed(1);
+        var equivalentWater = (
+          getCurrentResultValue("equivalentWater") - topWear[3]
+        ).toFixed(1);
+        var savingsWaste = (
+          getCurrentResultValue("savingsWaste") - topWear[4]
+        ).toFixed(1);
+        var equivalentWaste = (
+          getCurrentResultValue("equivalentWaste") - topWear[5]
+        ).toFixed(1);
 
-      getCounterElement.text(top);
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
-        .find(".result-value")
-        .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
-        .find(".result-value")
-        .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
-        .find(".result-value")
-        .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
-        .find(".result-value")
-        .text(equivalentWaste);
+        getCounterElement.text(top);
+        $("[data-groupname='savingsC02']")
+          .find(".result-value")
+          .text(savingsC02);
+        $("[data-groupname='equivalentTrees']")
+          .find(".result-value")
+          .text(equivalentTrees);
+        $("[data-groupname='savingsH20']")
+          .find(".result-value")
+          .text(savingsH20);
+        $("[data-groupname='equivalentWater']")
+          .find(".result-value")
+          .text(equivalentWater);
+        $("[data-groupname='savingsWaste']")
+          .find(".result-value")
+          .text(savingsWaste);
+        $("[data-groupname='equivalentWaste']")
+          .find(".result-value")
+          .text(equivalentWaste);
+      }
     }
   } else if (clicked == "Knit") {
     if (btnType == true) {
@@ -139,41 +146,48 @@ $(".control").click(function () {
         .find(".result-value")
         .text(equivalentWaste);
     } else {
-      knit = knit - 1;
-      var savingsC02 = (
-        getCurrentResultValue("savingsC02") - knitWear[0]
-      ).toFixed(1);
-      var equivalentTrees = (
-        getCurrentResultValue("equivalentTrees") - knitWear[1]
-      ).toFixed(1);
-      var savingsH20 = (
-        getCurrentResultValue("savingsH20") - knitWear[2]
-      ).toFixed(1);
-      var equivalentWater = (
-        getCurrentResultValue("equivalentWater") - knitWear[3]
-      ).toFixed(1);
-      var savingsWaste = (
-        getCurrentResultValue("savingsWaste") - knitWear[4]
-      ).toFixed(1);
-      var equivalentWaste = (
-        getCurrentResultValue("equivalentWaste") - knitWear[5]
-      ).toFixed(1);
+      if (knit <= 0) {
+      } else {
+        knit = knit - 1;
+        var savingsC02 = (
+          getCurrentResultValue("savingsC02") - knitWear[0]
+        ).toFixed(1);
+        var equivalentTrees = (
+          getCurrentResultValue("equivalentTrees") - knitWear[1]
+        ).toFixed(1);
+        var savingsH20 = (
+          getCurrentResultValue("savingsH20") - knitWear[2]
+        ).toFixed(1);
+        var equivalentWater = (
+          getCurrentResultValue("equivalentWater") - knitWear[3]
+        ).toFixed(1);
+        var savingsWaste = (
+          getCurrentResultValue("savingsWaste") - knitWear[4]
+        ).toFixed(1);
+        var equivalentWaste = (
+          getCurrentResultValue("equivalentWaste") - knitWear[5]
+        ).toFixed(1);
 
-      getCounterElement.text(knit);
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
-        .find(".result-value")
-        .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
-        .find(".result-value")
-        .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
-        .find(".result-value")
-        .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
-        .find(".result-value")
-        .text(equivalentWaste);
+        getCounterElement.text(knit);
+        $("[data-groupname='savingsC02']")
+          .find(".result-value")
+          .text(savingsC02);
+        $("[data-groupname='equivalentTrees']")
+          .find(".result-value")
+          .text(equivalentTrees);
+        $("[data-groupname='savingsH20']")
+          .find(".result-value")
+          .text(savingsH20);
+        $("[data-groupname='equivalentWater']")
+          .find(".result-value")
+          .text(equivalentWater);
+        $("[data-groupname='savingsWaste']")
+          .find(".result-value")
+          .text(savingsWaste);
+        $("[data-groupname='equivalentWaste']")
+          .find(".result-value")
+          .text(equivalentWaste);
+      }
     }
   } else if (clicked == "Dress") {
     if (btnType == true) {
@@ -214,41 +228,48 @@ $(".control").click(function () {
         .find(".result-value")
         .text(equivalentWaste);
     } else {
-      dress = dress - 1;
-      var savingsC02 = (
-        getCurrentResultValue("savingsC02") - dressWear[0]
-      ).toFixed(1);
-      var equivalentTrees = (
-        getCurrentResultValue("equivalentTrees") - dressWear[1]
-      ).toFixed(1);
-      var savingsH20 = (
-        getCurrentResultValue("savingsH20") - dressWear[2]
-      ).toFixed(1);
-      var equivalentWater = (
-        getCurrentResultValue("equivalentWater") - dressWear[3]
-      ).toFixed(1);
-      var savingsWaste = (
-        getCurrentResultValue("savingsWaste") - dressWear[4]
-      ).toFixed(1);
-      var equivalentWaste = (
-        getCurrentResultValue("equivalentWaste") - dressWear[5]
-      ).toFixed(1);
+      if (dress <= 0) {
+      } else {
+        dress = dress - 1;
+        var savingsC02 = (
+          getCurrentResultValue("savingsC02") - dressWear[0]
+        ).toFixed(1);
+        var equivalentTrees = (
+          getCurrentResultValue("equivalentTrees") - dressWear[1]
+        ).toFixed(1);
+        var savingsH20 = (
+          getCurrentResultValue("savingsH20") - dressWear[2]
+        ).toFixed(1);
+        var equivalentWater = (
+          getCurrentResultValue("equivalentWater") - dressWear[3]
+        ).toFixed(1);
+        var savingsWaste = (
+          getCurrentResultValue("savingsWaste") - dressWear[4]
+        ).toFixed(1);
+        var equivalentWaste = (
+          getCurrentResultValue("equivalentWaste") - dressWear[5]
+        ).toFixed(1);
 
-      getCounterElement.text(dress);
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
-        .find(".result-value")
-        .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
-        .find(".result-value")
-        .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
-        .find(".result-value")
-        .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
-        .find(".result-value")
-        .text(equivalentWaste);
+        getCounterElement.text(dress);
+        $("[data-groupname='savingsC02']")
+          .find(".result-value")
+          .text(savingsC02);
+        $("[data-groupname='equivalentTrees']")
+          .find(".result-value")
+          .text(equivalentTrees);
+        $("[data-groupname='savingsH20']")
+          .find(".result-value")
+          .text(savingsH20);
+        $("[data-groupname='equivalentWater']")
+          .find(".result-value")
+          .text(equivalentWater);
+        $("[data-groupname='savingsWaste']")
+          .find(".result-value")
+          .text(savingsWaste);
+        $("[data-groupname='equivalentWaste']")
+          .find(".result-value")
+          .text(equivalentWaste);
+      }
     }
   } else if (clicked == "Jeans") {
     if (btnType == true) {
@@ -289,41 +310,48 @@ $(".control").click(function () {
         .find(".result-value")
         .text(equivalentWaste);
     } else {
-      jeans = jeans - 1;
-      var savingsC02 = (
-        getCurrentResultValue("savingsC02") - jeansWear[0]
-      ).toFixed(1);
-      var equivalentTrees = (
-        getCurrentResultValue("equivalentTrees") - jeansWear[1]
-      ).toFixed(1);
-      var savingsH20 = (
-        getCurrentResultValue("savingsH20") - jeansWear[2]
-      ).toFixed(1);
-      var equivalentWater = (
-        getCurrentResultValue("equivalentWater") - jeansWear[3]
-      ).toFixed(1);
-      var savingsWaste = (
-        getCurrentResultValue("savingsWaste") - jeansWear[4]
-      ).toFixed(1);
-      var equivalentWaste = (
-        getCurrentResultValue("equivalentWaste") - jeansWear[5]
-      ).toFixed(1);
+      if (jeans <= 0) {
+      } else {
+        jeans = jeans - 1;
+        var savingsC02 = (
+          getCurrentResultValue("savingsC02") - jeansWear[0]
+        ).toFixed(1);
+        var equivalentTrees = (
+          getCurrentResultValue("equivalentTrees") - jeansWear[1]
+        ).toFixed(1);
+        var savingsH20 = (
+          getCurrentResultValue("savingsH20") - jeansWear[2]
+        ).toFixed(1);
+        var equivalentWater = (
+          getCurrentResultValue("equivalentWater") - jeansWear[3]
+        ).toFixed(1);
+        var savingsWaste = (
+          getCurrentResultValue("savingsWaste") - jeansWear[4]
+        ).toFixed(1);
+        var equivalentWaste = (
+          getCurrentResultValue("equivalentWaste") - jeansWear[5]
+        ).toFixed(1);
 
-      getCounterElement.text(jeans);
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
-        .find(".result-value")
-        .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
-        .find(".result-value")
-        .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
-        .find(".result-value")
-        .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
-        .find(".result-value")
-        .text(equivalentWaste);
+        getCounterElement.text(jeans);
+        $("[data-groupname='savingsC02']")
+          .find(".result-value")
+          .text(savingsC02);
+        $("[data-groupname='equivalentTrees']")
+          .find(".result-value")
+          .text(equivalentTrees);
+        $("[data-groupname='savingsH20']")
+          .find(".result-value")
+          .text(savingsH20);
+        $("[data-groupname='equivalentWater']")
+          .find(".result-value")
+          .text(equivalentWater);
+        $("[data-groupname='savingsWaste']")
+          .find(".result-value")
+          .text(savingsWaste);
+        $("[data-groupname='equivalentWaste']")
+          .find(".result-value")
+          .text(equivalentWaste);
+      }
     }
   } else if (clicked == "Pants") {
     if (btnType == true) {
@@ -364,41 +392,48 @@ $(".control").click(function () {
         .find(".result-value")
         .text(equivalentWaste);
     } else {
-      pants = pants - 1;
-      var savingsC02 = (
-        getCurrentResultValue("savingsC02") - trowsersWear[0]
-      ).toFixed(1);
-      var equivalentTrees = (
-        getCurrentResultValue("equivalentTrees") - trowsersWear[1]
-      ).toFixed(1);
-      var savingsH20 = (
-        getCurrentResultValue("savingsH20") - trowsersWear[2]
-      ).toFixed(1);
-      var equivalentWater = (
-        getCurrentResultValue("equivalentWater") - trowsersWear[3]
-      ).toFixed(1);
-      var savingsWaste = (
-        getCurrentResultValue("savingsWaste") - trowsersWear[4]
-      ).toFixed(1);
-      var equivalentWaste = (
-        getCurrentResultValue("equivalentWaste") - trowsersWear[5]
-      ).toFixed(1);
+      if (pants <= 0) {
+      } else {
+        pants = pants - 1;
+        var savingsC02 = (
+          getCurrentResultValue("savingsC02") - trowsersWear[0]
+        ).toFixed(1);
+        var equivalentTrees = (
+          getCurrentResultValue("equivalentTrees") - trowsersWear[1]
+        ).toFixed(1);
+        var savingsH20 = (
+          getCurrentResultValue("savingsH20") - trowsersWear[2]
+        ).toFixed(1);
+        var equivalentWater = (
+          getCurrentResultValue("equivalentWater") - trowsersWear[3]
+        ).toFixed(1);
+        var savingsWaste = (
+          getCurrentResultValue("savingsWaste") - trowsersWear[4]
+        ).toFixed(1);
+        var equivalentWaste = (
+          getCurrentResultValue("equivalentWaste") - trowsersWear[5]
+        ).toFixed(1);
 
-      getCounterElement.text(pants);
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
-        .find(".result-value")
-        .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
-        .find(".result-value")
-        .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
-        .find(".result-value")
-        .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
-        .find(".result-value")
-        .text(equivalentWaste);
+        getCounterElement.text(pants);
+        $("[data-groupname='savingsC02']")
+          .find(".result-value")
+          .text(savingsC02);
+        $("[data-groupname='equivalentTrees']")
+          .find(".result-value")
+          .text(equivalentTrees);
+        $("[data-groupname='savingsH20']")
+          .find(".result-value")
+          .text(savingsH20);
+        $("[data-groupname='equivalentWater']")
+          .find(".result-value")
+          .text(equivalentWater);
+        $("[data-groupname='savingsWaste']")
+          .find(".result-value")
+          .text(savingsWaste);
+        $("[data-groupname='equivalentWaste']")
+          .find(".result-value")
+          .text(equivalentWaste);
+      }
     }
   } else if (clicked == "Shoes") {
     if (btnType == true) {
@@ -439,46 +474,52 @@ $(".control").click(function () {
         .find(".result-value")
         .text(equivalentWaste);
     } else {
-      shoes = shoes - 1;
-      var savingsC02 = (
-        getCurrentResultValue("savingsC02") - shoesWear[0]
-      ).toFixed(1);
-      var equivalentTrees = (
-        getCurrentResultValue("equivalentTrees") - shoesWear[1]
-      ).toFixed(1);
-      var savingsH20 = (
-        getCurrentResultValue("savingsH20") - shoesWear[2]
-      ).toFixed(1);
-      var equivalentWater = (
-        getCurrentResultValue("equivalentWater") - shoesWear[3]
-      ).toFixed(1);
-      var savingsWaste = (
-        getCurrentResultValue("savingsWaste") - shoesWear[4]
-      ).toFixed(1);
-      var equivalentWaste = (
-        getCurrentResultValue("equivalentWaste") - shoesWear[5]
-      ).toFixed(1);
+      if (shoes <= 0) {
+      } else {
+        shoes = shoes - 1;
+        var savingsC02 = (
+          getCurrentResultValue("savingsC02") - shoesWear[0]
+        ).toFixed(1);
+        var equivalentTrees = (
+          getCurrentResultValue("equivalentTrees") - shoesWear[1]
+        ).toFixed(1);
+        var savingsH20 = (
+          getCurrentResultValue("savingsH20") - shoesWear[2]
+        ).toFixed(1);
+        var equivalentWater = (
+          getCurrentResultValue("equivalentWater") - shoesWear[3]
+        ).toFixed(1);
+        var savingsWaste = (
+          getCurrentResultValue("savingsWaste") - shoesWear[4]
+        ).toFixed(1);
+        var equivalentWaste = (
+          getCurrentResultValue("equivalentWaste") - shoesWear[5]
+        ).toFixed(1);
 
-      getCounterElement.text(shoes);
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
-        .find(".result-value")
-        .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
-        .find(".result-value")
-        .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
-        .find(".result-value")
-        .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
-        .find(".result-value")
-        .text(equivalentWaste);
+        getCounterElement.text(shoes);
+        $("[data-groupname='savingsC02']")
+          .find(".result-value")
+          .text(savingsC02);
+        $("[data-groupname='equivalentTrees']")
+          .find(".result-value")
+          .text(equivalentTrees);
+        $("[data-groupname='savingsH20']")
+          .find(".result-value")
+          .text(savingsH20);
+        $("[data-groupname='equivalentWater']")
+          .find(".result-value")
+          .text(equivalentWater);
+        $("[data-groupname='savingsWaste']")
+          .find(".result-value")
+          .text(savingsWaste);
+        $("[data-groupname='equivalentWaste']")
+          .find(".result-value")
+          .text(equivalentWaste);
+      }
     }
   }
 
   function getCurrentResultValue(dataGroupName) {
-    debugger;
     return parseFloat(
       $("[data-groupname='" + dataGroupName + "']")
         .find(".result-value")
