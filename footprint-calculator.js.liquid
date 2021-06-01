@@ -1,17 +1,17 @@
 /*
 values in format [savingsC02, equivalentTrees, savingsH20, equivalentWater, savingsWaste, equivalentWaste]
 */
-const topWear = [250000, 136, 23, 9, 0.2, 0.1];
+const topWear = [4.5, 0.2, 0.1, 0.5, 0.2, 0.1];
 const knitWear = [13.7, 0.2, 0.3, 1.4, 0.1, 0.3];
 const dressWear = [7.2, 0.2, 0.2, 0.7, 0.1, 0.2];
 const jeansWear = [13.8, 0.9, 0.3, 1.4, 0.7, 0.5];
 const trowsersWear = [13.5, 0.7, 0.3, 1.4, 0.5, 0.4];
 const shoesWear = [14.3, 0.1, 0.6, 1.4, 0.1, 1.1];
 
-$(".control").click(function () {
-  var clicked = $(this).parent().parent().attr("data-citem"); //gets to the parent attribute of the clicked button
-  var btnType = $(this).hasClass("plus"); //checks if the button clicked has plus or minus 'class'
-  var getCounterElement = $(this).siblings(".value");
+jQuery(".control").click(function () {
+  var clicked = jQuery(this).parent().parent().attr("data-citem"); //gets to the parent attribute of the clicked button
+  var btnType = jQuery(this).hasClass("plus"); //checks if the button clicked has plus or minus 'class'
+  var getCounterElement = jQuery(this).siblings(".value");
 
   console.log(clicked);
 
@@ -30,16 +30,16 @@ $(".control").click(function () {
       top = top + 1;
       var savingsC02 = (
         getCurrentResultValue("savingsC02") + topWear[0]
-      ).toFixed(0);
+      ).toFixed(1);
       var equivalentTrees = (
         getCurrentResultValue("equivalentTrees") + topWear[1]
-      ).toFixed(0);
+      ).toFixed(1);
       var savingsH20 = (
         getCurrentResultValue("savingsH20") + topWear[2]
-      ).toFixed(0);
+      ).toFixed(1);
       var equivalentWater = (
         getCurrentResultValue("equivalentWater") + topWear[3]
-      ).toFixed(0);
+      ).toFixed(1);
       var savingsWaste = (
         getCurrentResultValue("savingsWaste") + topWear[4]
       ).toFixed(1);
@@ -49,18 +49,18 @@ $(".control").click(function () {
 
       getCounterElement.text(top);
 
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
+      jQuery("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
+      jQuery("[data-groupname='equivalentTrees']")
         .find(".result-value")
         .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
+      jQuery("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
+      jQuery("[data-groupname='equivalentWater']")
         .find(".result-value")
         .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
+      jQuery("[data-groupname='savingsWaste']")
         .find(".result-value")
         .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
+      jQuery("[data-groupname='equivalentWaste']")
         .find(".result-value")
         .text(equivalentWaste);
     } else {
@@ -69,16 +69,16 @@ $(".control").click(function () {
         top = top - 1;
         var savingsC02 = (
           getCurrentResultValue("savingsC02") - topWear[0]
-        ).toFixed(0);
+        ).toFixed(1);
         var equivalentTrees = (
           getCurrentResultValue("equivalentTrees") - topWear[1]
-        ).toFixed(0);
+        ).toFixed(1);
         var savingsH20 = (
           getCurrentResultValue("savingsH20") - topWear[2]
-        ).toFixed(0);
+        ).toFixed(1);
         var equivalentWater = (
           getCurrentResultValue("equivalentWater") - topWear[3]
-        ).toFixed(0);
+        ).toFixed(1);
         var savingsWaste = (
           getCurrentResultValue("savingsWaste") - topWear[4]
         ).toFixed(1);
@@ -87,22 +87,22 @@ $(".control").click(function () {
         ).toFixed(1);
 
         getCounterElement.text(top);
-        $("[data-groupname='savingsC02']")
+        jQuery("[data-groupname='savingsC02']")
           .find(".result-value")
           .text(savingsC02);
-        $("[data-groupname='equivalentTrees']")
+        jQuery("[data-groupname='equivalentTrees']")
           .find(".result-value")
           .text(equivalentTrees);
-        $("[data-groupname='savingsH20']")
+        jQuery("[data-groupname='savingsH20']")
           .find(".result-value")
           .text(savingsH20);
-        $("[data-groupname='equivalentWater']")
+        jQuery("[data-groupname='equivalentWater']")
           .find(".result-value")
           .text(equivalentWater);
-        $("[data-groupname='savingsWaste']")
+        jQuery("[data-groupname='savingsWaste']")
           .find(".result-value")
           .text(savingsWaste);
-        $("[data-groupname='equivalentWaste']")
+        jQuery("[data-groupname='equivalentWaste']")
           .find(".result-value")
           .text(equivalentWaste);
       }
@@ -131,18 +131,18 @@ $(".control").click(function () {
 
       getCounterElement.text(knit);
 
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
+      jQuery("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
+      jQuery("[data-groupname='equivalentTrees']")
         .find(".result-value")
         .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
+      jQuery("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
+      jQuery("[data-groupname='equivalentWater']")
         .find(".result-value")
         .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
+      jQuery("[data-groupname='savingsWaste']")
         .find(".result-value")
         .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
+      jQuery("[data-groupname='equivalentWaste']")
         .find(".result-value")
         .text(equivalentWaste);
     } else {
@@ -169,22 +169,22 @@ $(".control").click(function () {
         ).toFixed(1);
 
         getCounterElement.text(knit);
-        $("[data-groupname='savingsC02']")
+        jQuery("[data-groupname='savingsC02']")
           .find(".result-value")
           .text(savingsC02);
-        $("[data-groupname='equivalentTrees']")
+        jQuery("[data-groupname='equivalentTrees']")
           .find(".result-value")
           .text(equivalentTrees);
-        $("[data-groupname='savingsH20']")
+        jQuery("[data-groupname='savingsH20']")
           .find(".result-value")
           .text(savingsH20);
-        $("[data-groupname='equivalentWater']")
+        jQuery("[data-groupname='equivalentWater']")
           .find(".result-value")
           .text(equivalentWater);
-        $("[data-groupname='savingsWaste']")
+        jQuery("[data-groupname='savingsWaste']")
           .find(".result-value")
           .text(savingsWaste);
-        $("[data-groupname='equivalentWaste']")
+        jQuery("[data-groupname='equivalentWaste']")
           .find(".result-value")
           .text(equivalentWaste);
       }
@@ -213,18 +213,18 @@ $(".control").click(function () {
 
       getCounterElement.text(dress);
 
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
+      jQuery("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
+      jQuery("[data-groupname='equivalentTrees']")
         .find(".result-value")
         .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
+      jQuery("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
+      jQuery("[data-groupname='equivalentWater']")
         .find(".result-value")
         .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
+      jQuery("[data-groupname='savingsWaste']")
         .find(".result-value")
         .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
+      jQuery("[data-groupname='equivalentWaste']")
         .find(".result-value")
         .text(equivalentWaste);
     } else {
@@ -251,22 +251,22 @@ $(".control").click(function () {
         ).toFixed(1);
 
         getCounterElement.text(dress);
-        $("[data-groupname='savingsC02']")
+        jQuery("[data-groupname='savingsC02']")
           .find(".result-value")
           .text(savingsC02);
-        $("[data-groupname='equivalentTrees']")
+        jQuery("[data-groupname='equivalentTrees']")
           .find(".result-value")
           .text(equivalentTrees);
-        $("[data-groupname='savingsH20']")
+        jQuery("[data-groupname='savingsH20']")
           .find(".result-value")
           .text(savingsH20);
-        $("[data-groupname='equivalentWater']")
+        jQuery("[data-groupname='equivalentWater']")
           .find(".result-value")
           .text(equivalentWater);
-        $("[data-groupname='savingsWaste']")
+        jQuery("[data-groupname='savingsWaste']")
           .find(".result-value")
           .text(savingsWaste);
-        $("[data-groupname='equivalentWaste']")
+        jQuery("[data-groupname='equivalentWaste']")
           .find(".result-value")
           .text(equivalentWaste);
       }
@@ -295,18 +295,18 @@ $(".control").click(function () {
 
       getCounterElement.text(jeans);
 
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
+      jQuery("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
+      jQuery("[data-groupname='equivalentTrees']")
         .find(".result-value")
         .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
+      jQuery("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
+      jQuery("[data-groupname='equivalentWater']")
         .find(".result-value")
         .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
+      jQuery("[data-groupname='savingsWaste']")
         .find(".result-value")
         .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
+      jQuery("[data-groupname='equivalentWaste']")
         .find(".result-value")
         .text(equivalentWaste);
     } else {
@@ -333,22 +333,22 @@ $(".control").click(function () {
         ).toFixed(1);
 
         getCounterElement.text(jeans);
-        $("[data-groupname='savingsC02']")
+        jQuery("[data-groupname='savingsC02']")
           .find(".result-value")
           .text(savingsC02);
-        $("[data-groupname='equivalentTrees']")
+        jQuery("[data-groupname='equivalentTrees']")
           .find(".result-value")
           .text(equivalentTrees);
-        $("[data-groupname='savingsH20']")
+        jQuery("[data-groupname='savingsH20']")
           .find(".result-value")
           .text(savingsH20);
-        $("[data-groupname='equivalentWater']")
+        jQuery("[data-groupname='equivalentWater']")
           .find(".result-value")
           .text(equivalentWater);
-        $("[data-groupname='savingsWaste']")
+        jQuery("[data-groupname='savingsWaste']")
           .find(".result-value")
           .text(savingsWaste);
-        $("[data-groupname='equivalentWaste']")
+        jQuery("[data-groupname='equivalentWaste']")
           .find(".result-value")
           .text(equivalentWaste);
       }
@@ -377,18 +377,18 @@ $(".control").click(function () {
 
       getCounterElement.text(pants);
 
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
+      jQuery("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
+      jQuery("[data-groupname='equivalentTrees']")
         .find(".result-value")
         .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
+      jQuery("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
+      jQuery("[data-groupname='equivalentWater']")
         .find(".result-value")
         .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
+      jQuery("[data-groupname='savingsWaste']")
         .find(".result-value")
         .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
+      jQuery("[data-groupname='equivalentWaste']")
         .find(".result-value")
         .text(equivalentWaste);
     } else {
@@ -415,22 +415,22 @@ $(".control").click(function () {
         ).toFixed(1);
 
         getCounterElement.text(pants);
-        $("[data-groupname='savingsC02']")
+        jQuery("[data-groupname='savingsC02']")
           .find(".result-value")
           .text(savingsC02);
-        $("[data-groupname='equivalentTrees']")
+        jQuery("[data-groupname='equivalentTrees']")
           .find(".result-value")
           .text(equivalentTrees);
-        $("[data-groupname='savingsH20']")
+        jQuery("[data-groupname='savingsH20']")
           .find(".result-value")
           .text(savingsH20);
-        $("[data-groupname='equivalentWater']")
+        jQuery("[data-groupname='equivalentWater']")
           .find(".result-value")
           .text(equivalentWater);
-        $("[data-groupname='savingsWaste']")
+        jQuery("[data-groupname='savingsWaste']")
           .find(".result-value")
           .text(savingsWaste);
-        $("[data-groupname='equivalentWaste']")
+        jQuery("[data-groupname='equivalentWaste']")
           .find(".result-value")
           .text(equivalentWaste);
       }
@@ -459,18 +459,18 @@ $(".control").click(function () {
 
       getCounterElement.text(shoes);
 
-      $("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
-      $("[data-groupname='equivalentTrees']")
+      jQuery("[data-groupname='savingsC02']").find(".result-value").text(savingsC02);
+      jQuery("[data-groupname='equivalentTrees']")
         .find(".result-value")
         .text(equivalentTrees);
-      $("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
-      $("[data-groupname='equivalentWater']")
+      jQuery("[data-groupname='savingsH20']").find(".result-value").text(savingsH20);
+      jQuery("[data-groupname='equivalentWater']")
         .find(".result-value")
         .text(equivalentWater);
-      $("[data-groupname='savingsWaste']")
+      jQuery("[data-groupname='savingsWaste']")
         .find(".result-value")
         .text(savingsWaste);
-      $("[data-groupname='equivalentWaste']")
+      jQuery("[data-groupname='equivalentWaste']")
         .find(".result-value")
         .text(equivalentWaste);
     } else {
@@ -497,22 +497,22 @@ $(".control").click(function () {
         ).toFixed(1);
 
         getCounterElement.text(shoes);
-        $("[data-groupname='savingsC02']")
+        jQuery("[data-groupname='savingsC02']")
           .find(".result-value")
           .text(savingsC02);
-        $("[data-groupname='equivalentTrees']")
+        jQuery("[data-groupname='equivalentTrees']")
           .find(".result-value")
           .text(equivalentTrees);
-        $("[data-groupname='savingsH20']")
+        jQuery("[data-groupname='savingsH20']")
           .find(".result-value")
           .text(savingsH20);
-        $("[data-groupname='equivalentWater']")
+        jQuery("[data-groupname='equivalentWater']")
           .find(".result-value")
           .text(equivalentWater);
-        $("[data-groupname='savingsWaste']")
+        jQuery("[data-groupname='savingsWaste']")
           .find(".result-value")
           .text(savingsWaste);
-        $("[data-groupname='equivalentWaste']")
+        jQuery("[data-groupname='equivalentWaste']")
           .find(".result-value")
           .text(equivalentWaste);
       }
@@ -521,7 +521,7 @@ $(".control").click(function () {
 
   function getCurrentResultValue(dataGroupName) {
     return parseFloat(
-      $("[data-groupname='" + dataGroupName + "']")
+      jQuery("[data-groupname='" + dataGroupName + "']")
         .find(".result-value")
         .text()
     );
